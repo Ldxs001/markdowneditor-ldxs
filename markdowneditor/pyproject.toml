@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "markdowneditor-ldxs"
+description = "Local Markdown editor: single-page live preview (KaTeX, image, block-incremental render), typography panel, Paged.js paged export, local HTTP backend."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "AGPL-3.0-or-later" }
+authors = [{ name = "wUwproject" }]
+keywords = ["markdown", "editor", "katex", "pagedjs", "local"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+dynamic = ["version"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Ldxs001/maby_tool"
+
+[project.gui-scripts]
+mdeditor = "markdowneditor_ldxs.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+package-dir = { "" = "src" }
+packages = ["markdowneditor_ldxs"]
+
+[tool.setuptools.dynamic]
+version = { attr = "markdowneditor_ldxs.__version__" }

@@ -1,0 +1,6 @@
+graft src/markdowneditor_ldxs/katex
+graft src/markdowneditor_ldxs/pagedjs
+include src/markdowneditor_ldxs/markdown-editor.html
+include src/markdowneditor_ldxs/md-editor.ico
+include src/markdowneditor_ldxs/LICENSE
+global-exclude __pycache__ *.py[cod]
